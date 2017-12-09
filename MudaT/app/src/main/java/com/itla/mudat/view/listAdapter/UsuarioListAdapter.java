@@ -21,6 +21,12 @@ public class UsuarioListAdapter extends BaseAdapter{
    private List<Usuario> usuarios;
    private Activity context;
 
+   public UsuarioListAdapter( List<Usuario> usuarios, Activity context)
+   {
+       this.usuarios = usuarios;
+       this.context = context;
+   }
+
     @Override
     public int getCount() {
         return usuarios.size();

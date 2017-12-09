@@ -11,8 +11,8 @@
         android:layout_width="348dp"
         android:layout_height="wrap_content"
         android:text="Mis Anuncios"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="70dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="6dp" />
 
     <Button
         android:id="@+id/btnAgregarAnuncios"
@@ -20,5 +20,5 @@
         android:layout_height="wrap_content"
         android:text="Agregar Anuncios"
         tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="139dp" />
+        tools:layout_editor_absoluteY="64dp" />
 </android.support.constraint.ConstraintLayout>

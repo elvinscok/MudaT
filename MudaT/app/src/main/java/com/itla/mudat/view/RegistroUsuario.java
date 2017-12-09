@@ -29,7 +29,8 @@ public class RegistroUsuario extends AppCompatActivity {
     private Usuario usuario;
     private Button btListar;
 
-    UsuarioDbo usuarioDbo;
+    private UsuarioDbo usuarioDbo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +83,19 @@ public class RegistroUsuario extends AppCompatActivity {
             }
         });
 
+        btListar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                usuarioDbo = new UsuarioDbo(getApplicationContext());
+                List<Usuario>listaUsuario = usuarioDbo.buscar();
+                for(Usuario u : listaUsuario)
+                {
+                    Toast.makeText(RegistroUsuario.this,usuario.toString(),Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
 
     }
 
@@ -100,4 +114,6 @@ public class RegistroUsuario extends AppCompatActivity {
             txClave.setText(usuario.getClave());
         }
     }
+
+
 }

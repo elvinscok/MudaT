@@ -22,7 +22,8 @@
             android:label="@string/RegistroUsuario" />
         <activity android:name=".Usuarios" />
         <activity android:name=".lista_usuario_row" />
-        <activity android:name=".Anuncios"></activity>
+        <activity android:name=".Anuncios" />
+        <activity android:name=".RegistraAnuncio"></activity>
     </application>
 
 </manifest>
