@@ -47,10 +47,10 @@ public class UsuarioListAdapter extends BaseAdapter{
         if(view == null)
         {
             LayoutInflater inflater = context.getLayoutInflater();
-            view = inflater.inflate(R.layout.activity_lista_usuario_row,null);
+            view = inflater.inflate(R.layout.lista_usuario_row,null);
         }
 
-        TextView listaUsuariosNombres = view.findViewById(R.id.luNombre);
+        TextView listaUsuariosNombres = view.findViewById(R.id.luNombres);
         TextView listaUusariosEmails = view.findViewById(R.id.luEmail);
 
         Usuario u = usuarios.get(i);

@@ -8,6 +8,6 @@ public class lista_usuario_row extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_usuario_row);
+        setContentView(R.layout.lista_usuario_row);
     }
 }
