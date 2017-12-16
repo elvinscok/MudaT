@@ -1,6 +1,8 @@
 package com.itla.mudat.view.listAdapter;
 
 import android.app.Activity;
+import android.content.Context;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,19 +15,19 @@ import com.itla.mudat.R;
 import java.util.List;
 
 /**
- * Created by elvinsalazar on 08/12/17.
+ * Created by Usuario on 12/2/2017.
  */
 
-public class UsuarioListAdapter extends BaseAdapter{
+public class UsuarioListAdapter extends BaseAdapter {
 
    private List<Usuario> usuarios;
    private Activity context;
 
-   public UsuarioListAdapter( List<Usuario> usuarios, Activity context)
-   {
-       this.usuarios = usuarios;
-       this.context = context;
-   }
+    public UsuarioListAdapter(List<Usuario> usuarios, Activity context) {
+        this.usuarios = usuarios;
+        this.context = context;
+    }
+
 
     @Override
     public int getCount() {
@@ -44,20 +46,21 @@ public class UsuarioListAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if(view == null)
-        {
+        if (view == null){
             LayoutInflater inflater = context.getLayoutInflater();
-            view = inflater.inflate(R.layout.lista_usuario_row,null);
+            view= inflater.inflate(R.layout.lista_usuario_row, null);
         }
-
-        TextView listaUsuariosNombres = view.findViewById(R.id.luNombres);
-        TextView listaUusariosEmails = view.findViewById(R.id.luEmail);
+        TextView listaUsuarioNombre = view.findViewById(R.id.listaUsuarioNombre);
+        TextView listaUsuarioEmail = view.findViewById(R.id.listaUsuarioEmail);
 
         Usuario u = usuarios.get(i);
 
-        listaUsuariosNombres.setText(u.getNombre());
-        listaUusariosEmails.setText(u.getEmail());
+        listaUsuarioNombre.setText(u.getNombre());
+        listaUsuarioEmail.setText(u.getEmail());
 
         return view;
     }
+
+
 }
+

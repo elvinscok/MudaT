@@ -9,7 +9,10 @@ import com.itla.mudat.Entity.Anuncio;
 import com.itla.mudat.Entity.Categoria;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Usuario on 11/28/2017.
@@ -51,6 +54,29 @@ public class CategoriaDbo {
 
             cursor.moveToNext();
             categorias.add(c);
+        }
+        cursor.close();
+        db.close();
+        return categorias;
+    }
+
+    public List<Map<String,String>> Llenarspinner(){
+        List<Map<String,String>>categorias = new ArrayList<Map<String,String>>();
+
+        SQLiteDatabase db = connection.getWritableDatabase();
+
+        String columnas[] = new String[]{"id", "descripcion" };
+
+        Cursor cursor = db.query("categoria", columnas, null, null, null, null, null );
+
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()){
+            Map v=new HashMap();
+            v.put("id",cursor.getInt(cursor.getColumnIndex("id")));
+            v.put("descripcion",cursor.getString(cursor.getColumnIndex("descripcion")));
+            categorias.add(v);
+            cursor.moveToNext();
         }
         cursor.close();
         db.close();

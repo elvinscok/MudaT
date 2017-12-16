@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,9 +21,9 @@
             android:name=".view.RegistroUsuario"
             android:label="@string/RegistroUsuario" />
         <activity android:name=".Usuarios" />
-        <activity android:name=".lista_usuario_row" />
         <activity android:name=".Anuncios" />
-        <activity android:name=".RegistraAnuncio"></activity>
+        <activity android:name=".AgregarAnuncio" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

@@ -1,101 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.itla.mudat.view.RegistroUsuario">
+    tools:context="com.itla.mudat.AgregarAnuncio">
 
     <TextView
-        android:id="@+id/textViewRegistroUsuario"
+        android:id="@+id/textViewAgregarAnuncios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Registro de Usuario"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorLink="@color/colorPrimaryDark" />
+        android:text="AGREGAR ANUNCIOS " />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewNombre"
+            android:id="@+id/textViewCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre" />
+            android:text="Categoria" />
+
+        <Spinner
+            android:id="@+id/idspinnercategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewCondicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condicion " />
 
         <EditText
-            android:id="@+id/editTextNombre"
+            android:id="@+id/editTextCondicion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textViewTipoUsuario"
+            android:id="@+id/textViewPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo de Usuario" />
+            android:text="Precio" />
 
         <EditText
-            android:id="@+id/editTextTipoUsuario"
+            android:id="@+id/editTextPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textViewIdentificacion"
+            android:id="@+id/textViewTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Identificacion" />
+            android:text="Titulo" />
 
         <EditText
-            android:id="@+id/editTextIdentificacion"
+            android:id="@+id/editTextTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/textViewUbicacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email" />
+            android:text="Ubicacion" />
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/editTextUbicacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textViewTelefono"
+            android:id="@+id/textViewDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Telefono" />
+            android:text="Detalle" />
 
         <EditText
-            android:id="@+id/editTextTelefono"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/textViewClave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Clave" />
-
-        <EditText
-            android:id="@+id/editTextClave"
+            android:id="@+id/editTextDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -107,21 +101,11 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonGuardar"
+                android:id="@+id/buttonGuardarAnuncio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Guardar"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <Button
-                android:id="@+id/buttonListar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Listar" />
+                android:text="Guardar" />
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

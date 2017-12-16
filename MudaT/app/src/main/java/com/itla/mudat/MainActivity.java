@@ -14,41 +14,67 @@ import com.itla.mudat.view.RegistroUsuario;
 public class MainActivity extends AppCompatActivity {
 
 
-    private  Button btnUsuarios;
+   // private EditText txtnombre;
+  //  private Button btnmostrar;
+  //  private Button btnRegistroUsuario;
+
+    private Button btnUsuarios;
     private Button btnAnuncios;
-    private Button btnCategorias;
+    private Button btnCategoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnUsuarios = findViewById(R.id.btnUsuarios);
-        btnAnuncios = findViewById(R.id.btnAnuncios);
-        btnCategorias = findViewById(R.id.btnCategorias);
+      //  txtnombre = (EditText) findViewById(R.id.txtNombre);
+      //  btnmostrar = (Button) findViewById(R.id.btnMostrar);
+
+      //  btnRegistroUsuario = (Button) findViewById(R.id.buttonRegistroUsuarios);
+        btnUsuarios = (Button) findViewById(R.id.buttonUsuarios);
+        btnAnuncios = (Button) findViewById(R.id.buttonAnuncios);
+        btnCategoria = (Button) findViewById(R.id.buttonCategoria);
 
 
         btnUsuarios.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
-                Intent usuario = new Intent(MainActivity.this, Usuarios.class);
+                Intent usuario =new Intent(MainActivity.this,Usuarios.class);
+
                 startActivity(usuario);
 
-
             }
-
         });
 
         btnAnuncios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent anuncio = new Intent(MainActivity.this,Anuncios.class);
+
+                Intent anuncio = new Intent(MainActivity.this, Anuncios.class);
+
                 startActivity(anuncio);
             }
         });
 
-       /* btnRegistroUsuario.setOnClickListener(new View.OnClickListener() {
+     //   btnmostrar.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+         //   public void onClick(View v) {
+
+        // Toast.makeText(MainActivity.this,"HOLA: ".concat(txtnombre.getText().toString()), Toast.LENGTH_LONG).show();
+
+            /*    Intent visualizar =new Intent(MainActivity.this,Visualizar.class);
+                Bundle parametros =new Bundle();
+                parametros.putString("Nombre","HOLA: ".concat(txtnombre.getText().toString()));
+                visualizar.putExtras(parametros);
+                startActivity(visualizar);
+
+
+            }
+
+        }); */
+
+     /*   btnRegistroUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -61,6 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-        });*/
+        }); */
     }
 }

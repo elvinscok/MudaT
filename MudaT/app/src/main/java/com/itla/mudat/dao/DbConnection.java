@@ -24,11 +24,28 @@ public class DbConnection extends SQLiteOpenHelper {
         db.execSQL(SqlHelperSchema.USUARIO_TABLE);
         db.execSQL(SqlHelperSchema.ANUNCIO_TABLE);
         db.execSQL(SqlHelperSchema.CATEGORIA_TABLE);
-
+        insertdefault(db);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
+    private void insertdefault(SQLiteDatabase sd)
+    {
+        try
+        {
+            sd.execSQL("insert or replace into Categoria (id,descripcion) values(1,'Apartamento');");
+            sd.execSQL("insert or replace into Categoria (id,descripcion) values(2,'Casa');");
+            sd.execSQL("insert or replace into Categoria (id,descripcion) values(3,'PenHouse');");
+            sd.execSQL("INSERT or replace INTO Usuario (id,nombre,tipoUsuario,identificacion,email,telefono,clave,estatus) values(1,'massiel',1,'40221112085','Massiel@gmail.com','809-873-9895','1234',1);");
+
+
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 }

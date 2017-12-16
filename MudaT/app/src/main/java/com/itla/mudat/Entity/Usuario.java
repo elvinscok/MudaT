@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Usuario on 11/18/2017.
  */
 
-public class Usuario implements Serializable{
+public class Usuario implements Serializable {
 
     private int id;
     private String nombre;

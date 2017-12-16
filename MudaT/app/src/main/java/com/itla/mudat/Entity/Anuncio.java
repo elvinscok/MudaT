@@ -9,11 +9,11 @@ import java.util.Date;
 public class Anuncio {
 
     private int id;
-    private Categoria categoria;
-    private Usuario usuario;
+    private int categoria;
+    private int usuario;
     private Date fecha;
     private String condicion;
-    private Double precio;
+    private String precio;
     private String titulo;
     private String ubicacion;
     private String detalle;
@@ -26,19 +26,19 @@ public class Anuncio {
         this.id = id;
     }
 
-    public Categoria getCategoria() {
+    public int getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
 
-    public Usuario getUsuario() {
+    public int getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(int usuario) {
         this.usuario = usuario;
     }
 
@@ -46,9 +46,9 @@ public class Anuncio {
         return fecha;
     }
 
-   /* public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }*/
+    }
 
     public String getCondicion() {
         return condicion;
@@ -58,13 +58,13 @@ public class Anuncio {
         this.condicion = condicion;
     }
 
-    public Double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-   /* public void setPrecio(String precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
-    }*/
+    }
 
     public String getTitulo() {
         return titulo;
